@@ -1,0 +1,68 @@
+/* Full page gradient background */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    text-align: center;
+    color: white;
+}
+
+/* Header styling */
+header {
+    padding: 40px 20px;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Card sections */
+.card {
+    background: white;
+    color: #333;
+    margin: 30px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* List styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #dd2476;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 15px;
+    margin-top: 30px;
+}
