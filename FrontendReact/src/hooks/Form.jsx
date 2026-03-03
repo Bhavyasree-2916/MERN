@@ -15,7 +15,7 @@ const Form = () => {
             [name]: value
         })
     }
-
+ 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
