@@ -1,16 +1,37 @@
-Q2. Validate Binary Search Tree in Financial Records
-Scenario:
-A financial institution stores account IDs in a binary tree. To maintain integrity, the structure must satisfy Binary Search Tree (BST) properties.
-The system must verify whether the given tree is valid.
-Input:
-•	Root of a binary tree
-Output:
-•	Boolean (true if valid BST, else false)
-Sample Input:
-      5
-     / \
-    3   7
-       /
-      4
-Sample Output:
-false
+import React, { useReducer } from "react";
+
+const initialState = { count: 0 };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "Increment":
+      return { count: state.count + 1 };
+
+    case "Decrement":
+      return { count: state.count - 1 };
+
+    case "Reset":
+      return { count: 0 };
+
+    default:
+      return state;
+  }
+}
+
+const Reducer = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <h1>useReducer example</h1>
+
+      <h2>Count: {state.count}</h2>
+
+      <button className='btn' onClick={() => dispatch({ type: "Increment" })}>+</button>
+      <button className='btn' onClick={() => dispatch({ type: "Decrement" })}>-</button>
+      <button className='btn' onClick={() => dispatch({ type: "Reset" })}>Reset</button>
+    </div>
+  );
+};
+
+export default Reducer;
